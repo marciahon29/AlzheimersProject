@@ -1,0 +1,1 @@
+https://github.com/ehosseiniasl/3d-convolutional-network/tree/master/ADNI_subject_id
