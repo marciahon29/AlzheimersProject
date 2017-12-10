@@ -1,0 +1,65 @@
+// NOTES
+// Must use CUDA 8 and cuDNN 6
+
+---
+// NVIDIA GeForce GTX 1080
+// download from here : http://www.nvidia.com/download/driverResults.aspx/126577/en-us
+// download first
+
+lspci | grep -i nvidia //check
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-384
+
+//restart
+
+cat /proc/driver/nvidia/version //check
+
+---
+// CUDA (version 8)
+// download from here: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
+
+// delete previous
+sudo apt-get autoremove --purge cuda
+
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda-8.0
+$ export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+$ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb
+
+sudo apt install nvidia-cuda-toolkit
+nvcc -V // check CUDA version						 
+
+---
+// cuDNN 6 for CUDA 8.0
+// download from here : https://developer.nvidia.com/rdp/cudnn-download
+
+sudo dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+
+Verify
+$cp -r /usr/src/cudnn_samples_v7/ $HOME
+$ cd $HOME/cudnn_samples_v7/mnistCUDNN
+$make clean && make
+$ ./mnistCUDNN
+>>> Test passed!
+
+---
+// TENSORFLOW
+$ sudo apt-get install python3-pip python3-dev # for Python 3.n
+$ pip3 install tensorflow-gpu # Python 3.n; GPU support 
+
+---
+// KERAS
+sudo pip3 install keras
+
+---
+// TESTING
+
+python
+>>> import keras
+>>>>>> Using TensorFlow backend
+
+ 
