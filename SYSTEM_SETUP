@@ -18,7 +18,7 @@ cat /proc/driver/nvidia/version //check
 
 ---
 // CUDA (version 8)
-// download from here: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
+// download from here: https://developer.nvidia.com/cuda-80-ga2-download-archive
 
 // delete previous
 sudo apt-get autoremove --purge cuda
