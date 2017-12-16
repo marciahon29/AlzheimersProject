@@ -10,7 +10,7 @@ lspci | grep -i nvidia //check
 
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
-sudo apt-get install nvidia-384
+sudo apt-get install nvidia-384  // for GTX 970, use nvidia-367
 
 //restart
 
