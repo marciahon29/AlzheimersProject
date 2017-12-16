@@ -58,7 +58,7 @@ sudo pip3 install keras
 ---
 // TESTING
 
-python
+python // python3
 >>> import keras
 >>>>>> Using TensorFlow backend
 
