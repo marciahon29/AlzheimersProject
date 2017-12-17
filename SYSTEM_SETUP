@@ -76,3 +76,7 @@ python -c 'import keras; print(keras.__version__)'
 sudo pip install keras==2.1.2
 
 
+---
+for plotting
+sudo apt-get install python-matplotlib
+
