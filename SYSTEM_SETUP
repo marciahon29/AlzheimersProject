@@ -67,3 +67,12 @@ python // python3
 if h5py error, then try:
 
 sudo apt-get install python-h5py
+
+
+---
+keras version
+
+python -c 'import keras; print(keras.__version__)'
+sudo pip install keras==2.1.2
+
+
