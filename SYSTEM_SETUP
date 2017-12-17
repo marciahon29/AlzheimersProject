@@ -62,4 +62,8 @@ python // python3
 >>> import keras
 >>>>>> Using TensorFlow backend
 
- 
+
+---
+if h5py error, then try:
+
+sudo apt-get install python-h5py
