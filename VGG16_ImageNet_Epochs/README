@@ -1,1 +1,39 @@
 
+Visualizations:
+
+sudo apt-get install python-matplotlib
+
+import matplotlib.pyplot as plt
+
+....
+    history = model.fit(train_data, train_labels,
+              nb_epoch=epochs,
+              batch_size=batch_size,
+              validation_data=(validation_data, validation_labels))
+....
+
+    history_dict =  history.history
+
+    #Plotting the training and validation loss
+    history_dict = history.history
+    loss_values = history_dict['loss']
+    val_loss_values = history_dict['val_loss']
+    epochs_0 = range(1, len(history_dict['acc']) + 1)
+    plt.plot(epochs_0, loss_values, 'bo', label='Training loss')
+    plt.plot(epochs_0, val_loss_values, 'b', label='Validation loss')
+    plt.title('Training and validation loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
+
+    #Plotting the training and validation accuracy
+    acc_values = history_dict['acc']
+    val_acc_values = history_dict['val_acc']
+    plt.plot(epochs_0, acc_values, 'bo', label='Training acc')
+    plt.plot(epochs_0, val_acc_values, 'b', label='Validation acc')
+    plt.title('Training and validation accuracy')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
