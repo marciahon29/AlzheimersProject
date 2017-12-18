@@ -68,6 +68,8 @@ if h5py error, then try:
 
 sudo apt-get install python-h5py
 
+import h5py as h5py
+
 
 ---
 keras version
@@ -78,5 +80,7 @@ sudo pip install keras==2.1.2
 
 ---
 for plotting
+
 sudo apt-get install python-matplotlib
 
+import matplotlib.pyplot as plt
