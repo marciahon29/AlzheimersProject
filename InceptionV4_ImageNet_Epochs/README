@@ -1,1 +1,4 @@
 
+This script requires Keras version 1.2.2
+
+sudo pip install keras==1.2.2
