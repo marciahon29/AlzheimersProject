@@ -75,7 +75,8 @@ import h5py as h5py
 keras version
 
 python -c 'import keras; print(keras.__version__)'
-sudo pip install keras==2.1.2
+sudo pip install keras==2.1.2 // older version: 1.2.2
+
 
 
 ---
