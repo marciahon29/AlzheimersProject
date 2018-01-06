@@ -1,0 +1,43 @@
+WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
+weights_path = get_file('vgg16_weights.h5', WEIGHTS_PATH_NO_TOP)
+
+# Group 0 -> train everything
+
+# Group 1
+model = Sequential()
+model.add(InputLayer(input_shape=(150, 150, 3)))
+model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+# Group 2
+model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+# Group 3
+model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+# Group 4
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+# Group 5
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv1'))
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv2'))
+model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv3'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block5_maxpool'))
+
+model.load_weights(weights_path)
+
+for layer in model.layers:
+    layer.trainable = False
+
+for layer in model.layers[-4:]:
+    layer.trainable = True
+    print("Layer '%s' is trainable" % layer.name)  
