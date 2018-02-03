@@ -1,1 +1,8 @@
 Scripts to work with ADNI data.
+
+First I resize to width=176 and height=208. Image is centered.
+
+Next I create boxes of size 320 or 640 (5 boxes).
+
+Then I group these cross-wise so the ratio is 4:1
+
