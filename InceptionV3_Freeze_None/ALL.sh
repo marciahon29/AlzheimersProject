@@ -1,0 +1,8 @@
+#!/bin/bash
+
+python InceptionV3_Freeze_none_00.py > InceptionV3_freeze_none_00_results.txt
+python InceptionV3_Freeze_none_01.py > InceptionV3_freeze_none_01_results.txt
+python InceptionV3_Freeze_none_02.py > InceptionV3_freeze_none_02_results.txt
+python InceptionV3_Freeze_none_03.py > InceptionV3_freeze_none_03_results.txt
+python InceptionV3_Freeze_none_04.py > InceptionV3_freeze_none_04_results.txt
+python InceptionV3_Freeze_none_05.py > InceptionV3_freeze_none_05_results.txt
