@@ -12,7 +12,7 @@
 	
 	InceptionV3_Freeze_None
 	
-	InceptionV3_Freeze_RECENT
+	InceptionV3_Freeze
 	
   	VGG16_Freeze
 	
