@@ -1,6 +1,0 @@
-You need to find from the internet either (one is TensorFlow and other is Theano). They are too big for me to upload to GitHub.
-
-1. inception-v4_weights_tf_dim_ordering_tf_kernels.h5
-
-2. inception-v4_weights_th_dim_ordering_th_kernels.h5
-
