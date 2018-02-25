@@ -19,9 +19,3 @@
 	VGG16_Freeze_None
 	
 	
-	
-  Deprecated:
-  
-	InceptionV4_ImageNet_Epochs
-	
-	VGG16_ImageNet_Epochs
